@@ -49,3 +49,4 @@ Categorize your transactions.
 View summaries and check your spending patterns.
 
 
+

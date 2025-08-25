@@ -32,3 +32,4 @@ out/
 *.ear
 *.apk
 *.ap_
+app/google-services.json

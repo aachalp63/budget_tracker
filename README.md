@@ -37,7 +37,8 @@ A simple and intuitive **Android app** to track your **income and expenses**. He
 ```bash
 git clone https://github.com/aachalp63/budget_tracker.git
 
-## Usage
+---
+**## Usage**
 
 Launch the app.
 
@@ -46,4 +47,5 @@ Add income or expense transactions.
 Categorize your transactions.
 
 View summaries and check your spending patterns.
+
 

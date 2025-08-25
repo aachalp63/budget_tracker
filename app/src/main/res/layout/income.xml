@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C0E7F6"
+    android:padding="16dp">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/expenseText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Income"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/refreshIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_refresh" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:backgroundTint="#7B30E3"
+            android:drawablePadding="8dp"
+            android:paddingHorizontal="8dp"
+            android:text="Save"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Category Grid -->
+    <GridLayout
+        android:id="@+id/categoryGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:useDefaultMargins="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+        <ImageButton
+            android:id="@+id/catSalary"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/category_selector"
+            android:contentDescription="Salary"
+            android:src="@drawable/ic_salary" />
+
+        <ImageButton
+            android:id="@+id/catTrading"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/category_selector"
+            android:contentDescription="Trading"
+            android:src="@drawable/ic_trading" />
+
+        <ImageButton
+            android:id="@+id/catBills"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/category_selector"
+            android:contentDescription="Business"
+            android:src="@drawable/ic_bills" />
+
+        <ImageButton
+            android:id="@+id/catOthers"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/category_selector"
+            android:contentDescription="Others"
+            android:src="@drawable/ic_others" />
+
+        <TextView
+            android:id="@+id/salary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salary"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <TextView
+            android:id="@+id/Trading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trading"
+            android:layout_row="1"
+            android:layout_column="1" />
+
+        <TextView
+            android:id="@+id/business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Business"
+            android:layout_row="1"
+            android:layout_column="2" />
+
+        <TextView
+            android:id="@+id/Others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Others"
+            android:layout_row="2"
+            android:layout_column="0" />
+    </GridLayout>
+
+    <!-- Selected Category & Inputs -->
+    <LinearLayout
+        android:id="@+id/inputSection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoryGrid">
+
+        <ImageView
+            android:id="@+id/selectedIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_others"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/titleInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Title"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/amountInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="Amount"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <!-- Date and Time Section -->
+    <LinearLayout
+        android:id="@+id/dateTimeSection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/inputSection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:background="#DDDDDD"
+            android:text="Select Date"
+            android:gravity="center" />
+
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:background="#DDDDDD"
+            android:text="Select Time"
+            android:gravity="center"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:background="#301B8C"
+        android:fontFamily="sans-serif-medium"
+        android:paddingStart="100dp"
+        android:paddingTop="20dp"
+        android:text="Budget Tracker"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingTop="10dp"
+        android:text="Registration"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:hint="Username" />
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:hint="Email" />
+
+    <EditText
+        android:id="@+id/phoneno"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:hint="Mobile Number" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:password="true" />
+
+    <EditText
+        android:id="@+id/conpassword"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:password="true" />
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+
+</LinearLayout>
